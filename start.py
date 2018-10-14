@@ -31,8 +31,8 @@ while(t<30):
 		# removing previous current file
 		files = glob.glob('images/current/*')
 		for f in files:
-			if os.path.basename(f) != "payload.txt"
-			os.remove(f)
+			if os.path.basename(f) != "payload.txt":
+				os.remove(f)
 		
 		currentFileName = str(int(time.mktime(now.timetuple())));
 		currentFileName = 'images/current/' + currentFileName + '.png';
@@ -46,17 +46,17 @@ while(t<30):
 	# saving log image every 60 seconds
 	if abs( prevTimeLog - int(time.mktime(now.timetuple())) )>=60 :
 		# generate folder name
-		folderName = 'images/log/' + now.strftime('%Y-%m-%d') + '/'
+		folderName = 'images/log/' + now.strftime('%Y%m%d') + '/'
 
 		# directory creation
 		if not os.path.exists(folderName):
 			os.makedirs(folderName)
 
-		folderName = folderName + now.strftime('%H') + '-00/'
+		folderName = folderName + now.strftime('%H') + '00/'
 		if not os.path.exists(folderName):
 			os.makedirs(folderName)
 		
-		currentFileName = folderName + now.strftime('%H:%M:%S') + '.png';
+		currentFileName = folderName + now.strftime('%H%M%S') + '.png';
 		
 		# saving image
 		cv2.imwrite(currentFileName, frame)
