@@ -11,7 +11,7 @@ prevTimeCurrent = 0
 prevTimeLog = 0
 
 # while(t<30):
-while(true):
+while True:
 	# getting current time
 	now = datetime.datetime.utcnow()
 
