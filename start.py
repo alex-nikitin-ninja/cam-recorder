@@ -31,7 +31,7 @@ while(t<30):
 		# removing previous current file
 		files = glob.glob('images/current/*')
 		for f in files:
-			if os.path.basename(f) != "payload.txt":
+			if os.path.basename(f) != "payload.txt" :
 				os.remove(f)
 		
 		currentFileName = str(int(time.mktime(now.timetuple())));
