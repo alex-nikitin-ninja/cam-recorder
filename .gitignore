@@ -1,0 +1,3 @@
+images/*
+!images/current/payload.txt
+!images/log/payload.txt
