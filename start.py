@@ -10,7 +10,8 @@ t = 0
 prevTimeCurrent = 0
 prevTimeLog = 0
 
-while(t<30):
+# while(t<30):
+while(true):
 	# getting current time
 	now = datetime.datetime.utcnow()
 
